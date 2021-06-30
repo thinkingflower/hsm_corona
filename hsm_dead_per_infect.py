@@ -64,10 +64,10 @@ class DataProcessing:
 				f.write(line + '\n')
 
 	def hsm_program(self):
-		proc = subprocess.run('../HotSpotMiner1.72/hsm coronaData.txt {} -p'.format(self.threshold), shell=True)
+		proc = subprocess.run('./hsm coronaData.txt {} -p'.format(self.threshold), shell=True)
 
 		mylist = subprocess.Popen(
-			'../HotSpotMiner1.72/hsm coronaData.txt {} -p'.format(self.threshold), 
+			'./hsm coronaData.txt {} -p'.format(self.threshold), 
 			stdout=subprocess.PIPE, 
 			shell=True).stdout.readlines()
 		print(mylist[4])
